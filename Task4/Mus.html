@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Selection</title>
+    <link rel="stylesheet" href="Mus.css">
+</head>
+<body>
+    <div class="album-list">
+        <div class="album" onclick="selectAlbum(1)">
+            <img src="images/track1-1.jpg" alt="Album 1">
+            <p>Album 1</p>
+        </div>
+        <div class="album" onclick="selectAlbum(2)">
+            <img src="images/track1-2.jpg" alt="Album 2">
+            <p>Album 2</p>
+        </div>
+        <div class="album" onclick="selectAlbum(3)">
+            <img src="images/track2-1.jpg" alt="Album 3">
+            <p>Album 3</p>
+        </div>
+    </div>
+
+    <script>
+        function selectAlbum(albumId) {
+            localStorage.setItem('selectedAlbum', albumId);
+            window.location.href = 'player.html';
+        }
+    </script>
+</body>
+</html>
